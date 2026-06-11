@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angie's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="#home">Angela Nduku</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home"    class="nav-link" data-section="home">HOME</a></li>
+          <li><a href="#about"   class="nav-link" data-section="about">ABOUT ME</a></li>
+          <li><a href="#resume"  class="nav-link" data-section="resume">RESUME</a></li>
+          <li><a href="#projects" class="nav-link" data-section="projects">PROJECTS</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">CONTACT</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HOME ===== -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+
+        <!-- Profile image (left) -->
+        <div class="hero-image-col">
+          <div class="hero-image-wrap">
+            <img src="angie.JPEG.jpeg" alt="Angela Mumo" class="hero-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hero-photo-placeholder">AM</profile></div>
+          </div>
+        </div>
+
+        <!-- Text content (right) -->
+        <div class="hero-content">
+          <h1>Hello</h1>
+          <h2>Here's who I am and what I do</h2>
+          <p class="hero-subtitle">
+            My name is Angela Nduku, a web developer passionate about creating beautiful and
+            functional websites and mobile applications. Get in touch to see how I can help
+            bring your ideas to life!
+          </p>
+          <div class="hero-buttons">
+            <a href="#resume"   class="btn btn-primary"   data-section="resume">RESUME</a>
+            <a href="#projects" class="btn btn-secondary" data-section="projects">PROJECTS</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="hero-socials">
+        <a href= "https://www.facebook.com/share/1Ek2oU1nLN/">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="hero-social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="hero-social-link" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p class="about-text">
+            I am a student currently pursuing Computer Science as my major. I am passionate about
+            web development and data analysis. I have expertise in creating responsive, user-friendly
+            websites and mobile applications, with a strong foundation in HTML, CSS and JavaScript.
+            I am also passionate about working with data — analyzing and interpreting complex datasets
+            to extract meaningful insights and solve real-world problems. Through my coursework, I have
+            gained skills in SQL, Python and Excel.
+          </p>
+          <p>When I'm not coding, you can find me exploring new technologies, reading a novel,
+            watching my favourite TV shows or listening to music.</p>
+          <div class="skills">
+            <h3>My Skills</h3>
+            <div class="skills-grid">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESUME ===== -->
+    <section id="resume" class="resume">
+      <div class="container">
+        <!-- Content rendered by script.js -->
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project cards rendered by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <p>I'd love to hear from you! Whether you have a project in mind or just want to
+               say hello, feel free to reach out.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <span>angelanduku622@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <span>+254 740 629 335</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">🌐</span>
+                <span>Available for freelance work</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <input type="text"  placeholder="Your Name"    required>
+            <input type="email" placeholder="Your Email"   required>
+            <textarea rows="5"  placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Angela. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -211,7 +211,7 @@ function renderResume() {
 
       <!-- Download -->
       <div class="resume-download">
-        <a href="ANGELA_MUMO_CV.pdf" download class="btn btn-primary">
+        <a href="ANGELA MUMO CV.pdf" download class="btn btn-primary">
           <i class="fas fa-download"></i> Download Full CV
         </a>
       </div>

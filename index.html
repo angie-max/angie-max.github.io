@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angie's Portfolio</title>
+    <title>Angie</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
 
@@ -14,7 +14,7 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="logo">
-          <a href="#home">Angela Nduku</a>
+          <a href="#home">Angie</a>
         </div>
         <ul class="nav-menu">
           <li><a href="#home"    class="nav-link" data-section="home">HOME</a></li>
@@ -38,8 +38,8 @@
         <!-- Profile image (left) -->
         <div class="hero-image-col">
           <div class="hero-image-wrap">
-            <img src="angie.JPEG.jpeg" alt="Angela Mumo" class="hero-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="hero-photo-placeholder">AM</profile></div>
+            <img src="profile.jpg" alt="Angela Mumo" class="hero-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hero-photo-placeholder">AM</div>
           </div>
         </div>
 
@@ -59,8 +59,10 @@
         </div>
 
       </div>
+
+      <!-- Social icons — bottom right -->
       <div class="hero-socials">
-        <a href= "https://www.facebook.com/share/1Ek2oU1nLN/">
+        <a href="#" class="hero-social-link" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
         <a href="#" class="hero-social-link" aria-label="Instagram">
@@ -70,6 +72,7 @@
           <i class="fab fa-tiktok"></i>
         </a>
       </div>
+
     </section>
 
     <!-- ===== ABOUT ===== -->
@@ -144,9 +147,9 @@
             </div>
           </div>
           <form class="contact-form" id="contact-form" novalidate>
-            <input type="text"  placeholder="Your Name"    required>
-            <input type="email" placeholder="Your Email"   required>
-            <textarea rows="5"  placeholder="Your Message" required></textarea>
+            <input type="text"  name="name"    placeholder="Your Name"    required>
+            <input type="email" name="email"   placeholder="Your Email"   required>
+            <textarea rows="5"  name="message" placeholder="Your Message" required></textarea>
             <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>
@@ -156,7 +159,7 @@
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2026 Angela. All rights reserved.</p>
+        <p>&copy; 2024 Angela. All rights reserved.</p>
         <div class="social-links">
           <a href="#" class="social-link">GitHub</a>
         </div>

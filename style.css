@@ -303,6 +303,14 @@ section.visible {
   }
 
   .hero-socials {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5rem;
+    display: flex;
+  }
+
+  .hero-socials::before {
     display: none;
   }
 
@@ -536,6 +544,18 @@ section.visible {
 
 .resume-link:hover {
   color: var(--brown-dark);
+}
+
+.resume-download {
+  padding: 1.5rem 0 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.resume-download .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 @media (max-width: 480px) {

@@ -211,6 +211,13 @@ function renderResume() {
         <p class="resume-block-text" style="font-style: italic; opacity: 0.75;">Available upon request.</p>
       </div>
 
+      <!-- Download -->
+      <div class="resume-download">
+        <a href="ANGELA_MUMO_CV.pdf" download class="btn btn-primary">
+          <i class="fas fa-download"></i> Download Full CV
+        </a>
+      </div>
+
     </div>
   `;
 }
@@ -227,7 +234,7 @@ if (contactForm) {
   msgEl.className = 'form-message';
   contactForm.insertAdjacentElement('afterend', msgEl);
 
-  contactForm.addEventListener('submit', e => {
+  contactForm.addEventListener('submit', async e => {
     e.preventDefault();
 
     const name = contactForm.querySelector('input[type="text"]').value.trim();
@@ -244,9 +251,30 @@ if (contactForm) {
       return;
     }
 
-    // Simulate successful submission
-    showFormMessage(`Thanks, ${name}! Your message has been sent. I'll get back to you soon.`, 'success');
-    contactForm.reset();
+    // Disable button while sending
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    try {
+      const response = await fetch('https://formspree.io/f/xykadbpg', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm),
+      });
+
+      if (response.ok) {
+        showFormMessage(`Thanks, ${name}! Your message has been sent. I'll get back to you soon.`, 'success');
+        contactForm.reset();
+      } else {
+        showFormMessage('Oops! Something went wrong. Please try again or email me directly.', 'error');
+      }
+    } catch (err) {
+      showFormMessage('Could not send message. Please check your connection and try again.', 'error');
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
   });
 
   function showFormMessage(text, type) {

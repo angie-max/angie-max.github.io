@@ -135,9 +135,7 @@ function renderResume() {
       <div class="resume-block">
         <h3 class="resume-block-title">Career Objective</h3>
         <p class="resume-block-text">
-          Third-year Computer Science student at Kirinyaga University, seeking an industrial
-          attachment opportunity to enhance technical skills and gain practical experience,
-          with a strong interest in front-end web development.
+          Final-year Computer Science student at Kirinyaga University with a strong interest in front-end web development.
         </p>
       </div>
 
@@ -149,7 +147,7 @@ function renderResume() {
             <span class="resume-entry-role">BSc Computer Science</span>
             <span class="resume-entry-date">2025 – Expected 2027</span>
           </div>
-          <span class="resume-entry-place">Kirinyaga University &mdash; Third Year</span>
+          <span class="resume-entry-place">Kirinyaga University &mdash; Final Year</span>
         </div>
       </div>
 

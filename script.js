@@ -135,7 +135,8 @@ function renderResume() {
       <div class="resume-block">
         <h3 class="resume-block-title">Career Objective</h3>
         <p class="resume-block-text">
-          Final-year Computer Science student at Kirinyaga University with a strong interest in front-end web development.
+          Final-year Computer Science student at Kirinyaga University, 
+          with a strong interest in front-end web development.
         </p>
       </div>
 
@@ -211,7 +212,7 @@ function renderResume() {
 
       <!-- Download -->
       <div class="resume-download">
-        <a href="ANGELA MUMO CV.pdf" download class="btn btn-primary">
+        <a href="ANGELA_MUMO_CV.pdf" download class="btn btn-primary">
           <i class="fas fa-download"></i> Download Full CV
         </a>
       </div>
@@ -221,69 +222,6 @@ function renderResume() {
 }
 
 renderResume();
-
-// ===================== CONTACT FORM =====================
-
-const contactForm = document.getElementById('contact-form');
-
-if (contactForm) {
-  // Add a message container after the form
-  const msgEl = document.createElement('p');
-  msgEl.className = 'form-message';
-  contactForm.insertAdjacentElement('afterend', msgEl);
-
-  contactForm.addEventListener('submit', async e => {
-    e.preventDefault();
-
-    const name = contactForm.querySelector('input[type="text"]').value.trim();
-    const email = contactForm.querySelector('input[type="email"]').value.trim();
-    const message = contactForm.querySelector('textarea').value.trim();
-
-    if (!name || !email || !message) {
-      showFormMessage('Please fill in all fields.', 'error');
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      showFormMessage('Please enter a valid email address.', 'error');
-      return;
-    }
-
-    // Disable button while sending
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-
-    try {
-      const response = await fetch('https://formspree.io/f/xykadbpg', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(contactForm),
-      });
-
-      if (response.ok) {
-        showFormMessage(`Thanks, ${name}! Your message has been sent. I'll get back to you soon.`, 'success');
-        contactForm.reset();
-      } else {
-        showFormMessage('Oops! Something went wrong. Please try again or email me directly.', 'error');
-      }
-    } catch (err) {
-      showFormMessage('Could not send message. Please check your connection and try again.', 'error');
-    }
-
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Send Message';
-  });
-
-  function showFormMessage(text, type) {
-    msgEl.textContent = text;
-    msgEl.className = `form-message ${type}`;
-  }
-
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-}
 
 // ===================== INITIAL STATE =====================
 

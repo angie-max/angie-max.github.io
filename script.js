@@ -62,6 +62,15 @@ navLinks.forEach(link => {
   });
 });
 
+// Wire up hero buttons (Resume / Projects) on the home page
+const heroButtons = document.querySelectorAll('.hero-buttons [data-section]');
+heroButtons.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    showSection(btn.dataset.section);
+  });
+});
+
 // Hamburger toggle
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
@@ -135,8 +144,7 @@ function renderResume() {
       <div class="resume-block">
         <h3 class="resume-block-title">Career Objective</h3>
         <p class="resume-block-text">
-          Final-year Computer Science student at Kirinyaga University, 
-          with a strong interest in front-end web development.
+          Final-year Computer Science student at Kirinyaga University with a strong interest in front-end web development.
         </p>
       </div>
 
